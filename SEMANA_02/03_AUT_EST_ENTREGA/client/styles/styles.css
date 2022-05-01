@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;900&family=Montserrat:wght@400&display=swap');
+body {
+    margin: 0;
+    font-family: Montserrat;
+    width: 100%;
+    max-width: 100%;
+}
+
+.main {
+    padding-top: 1.5rem;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background-color: #2E3333;
+}
+
+.header {
+    background-color: #7ed957;
+    padding: 7rem 2rem;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-evenly;
+}
+
+.body {
+    width: 100%;
+    max-width: 100vw;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-around;
+}   
+
+.name {
+    min-width: 60vw;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    font-weight: rem;
+}
+
+.left{
+    min-width: 50vw;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+}
+
+.right {
+    min-width: 35vw;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    padding-right: 1rem;
+}
+
+.nameTitle {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.perfil {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
+}
+
+.perfilTitle, .perfilSubtitle {
+    margin: 0;
+    font-size: 1.2rem;
+
+}
+
+.nameSubtitle {
+    color: #008037;
+    font-size: 1.3rem;
+    font-weight: 1000;
+    letter-spacing: 0.2rem;
+}
+
+.perfilTitle {
+    letter-spacing: 0.1rem;
+}
+
+.line{
+    height: 10px; 
+    border-width: 0; 
+    margin-left: -4rem;
+    width: 50%;
+    background-color: #7ed957;
+}
+
+.bodyTitle {
+    color: #7ed957;
+}
+
+.experienceTitle {
+    color: #008037;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.experienceDesc {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.bodyText {
+    color: white;
+    font-size: 1rem;
+}
