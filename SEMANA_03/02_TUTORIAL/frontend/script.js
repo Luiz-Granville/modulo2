@@ -1,4 +1,4 @@
-﻿/* 
+/* 
 =======================
 Declaração de variáveis
 =======================
@@ -53,7 +53,8 @@ function Calc(x, y, op){
 
 /* Função que mostra a operação realizada */
 function ShowOp(x, y, op){
-    document.getElementById(calcResDiv).innerHTML += `<br /> ${x} ${op} ${y} = `;
+    var divText = document.getElementById(calcResDiv).innerHTML
+    document.getElementById(calcResDiv).innerHTML = divText +`<br /> ${x} ${op} ${y} = `;
     //Alternativa: .. += "<br />" + x + " " + op + " " + y + " = "
 }
 
