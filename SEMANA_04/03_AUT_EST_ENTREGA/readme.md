@@ -1,7 +1,7 @@
-# Exercício para entrega na SEMANA 4 - referente ao conteúdo na etapa 3 (`SEMANA03/02_TUTORIAL`)
+# Exercício para entrega na SEMANA 2 - referente à etapa 1 (`SEMANA01/02_TUTORIAL`)
 
 ## Descrição
-Atualize seu seu projeto individual do currículo profissional incluindo um script JS que adicione uma linha, por meio do script, ao currículo
+Adapte os códigos e documentos apresentado na etapa do tutorial da semana 1 para construir seu currículo em uma página HTML que seja servida via Node.JS 
 
 
 ## Forma de entrega
