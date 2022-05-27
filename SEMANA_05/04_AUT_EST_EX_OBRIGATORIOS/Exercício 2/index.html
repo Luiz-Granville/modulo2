@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Bank</title>
+</head>
+
+<body>
+    <div id="main">
+        <div id="request">
+            <input id="value" placeholder="Informe o valor de saque" type="number">
+            <button class="button-52" onclick="caixaEletronico(document.getElementById('value').value)" role="button">SACAR</button>
+        </div>
+        <div>
+            <ul>
+                <li><img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/1_Brazil_real_First_Obverse_01.jpg/220px-1_Brazil_real_First_Obverse_01.jpg">
+                    <h2 id="1">0</h2>
+                    <h2> cédulas de 1 Real</h2>
+                </li>
+                <li><img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/2_Brazil_real_Second_Obverse.jpg/220px-2_Brazil_real_Second_Obverse.jpg">
+                    <h2 id="2">0</h2>
+                    <h2> cédulas de 2 reais</h2>
+                </li>
+                <li><img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/5_Brazil_real_Second_Obverse.jpg/220px-5_Brazil_real_Second_Obverse.jpg">
+                    <h2 id="5">0</h2>
+                    <h2> cédulas de 5 reais</h2>
+                </li>
+                <li><img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/10_Brazil_real_Second_Obverse.jpg/220px-10_Brazil_real_Second_Obverse.jpg">
+                    <h2 id="10">0</h2>
+                    <h2> cédulas de 10 reais</h2>
+                </li>
+                <li><img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/20_Brazil_real_Second_Obverse.jpg/220px-20_Brazil_real_Second_Obverse.jpg">
+                    <h2 id="20">0</h2>
+                    <h2> cédulas de 20 reais</h2>
+                </li>
+                <li><img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/50_Brazil_real_Second_Obverse.jpg/220px-50_Brazil_real_Second_Obverse.jpg">
+                    <h2 id="50">0</h2>
+                    <h2> cédulas de 50 reais</h2>
+                </li>
+                <li><img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/100_Brazil_real_Second_Obverse.jpg/220px-100_Brazil_real_Second_Obverse.jpg">
+                    <h2 id="100">0</h2>
+                    <h2> cédulas de 100 reais</h2>
+                </li>
+                <li id="troco">
+
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="./cedulas.js"></script>
+</body>
+
+</html>
