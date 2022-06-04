@@ -1,30 +1,29 @@
-function binarieSearch(focus, items){
-    var medium = items.length/2
-    var min = 0
-    var max = items.length
-    var boolean = false
-    while(boolean == false){
-        if (items[medium] == focus){
-            boolean = true
-            return medium
-        }
-        else if(focus > items[medium]){
-            min = items[medium+1]
-            medium = (max - min)/2
-        }
-        else{
-            max = items[medium-1]
-            medium = (max - min)/2
+
+function binarieSearch(key, sortedArray){
+    let start = 0;
+    let end = sortedArray.length - 1;
+
+    while (start <= end) {
+        let middle = Math.floor((start + end) / 2);
+
+        if (sortedArray[middle] === key) {
+            return middle+"º";
+        } else if (sortedArray[middle] < key) {
+            start = middle + 1;
+        } else {
+            end = middle - 1;
         }
     }
+    return "Não foi encontrado";
 }
-
 function bubbleSort() {
     var string = document.getElementById("text").value;
-    var items= [];
-    for (i = 0; i<string.length; i++){
-    items.push(string[i])
-    }
+    var itemsStr= string.split(",");
+    items = [];
+    itemsStr.forEach(str => {
+        items.push(Number(str));
+    });
+
     var length = items.length;  
     for (var i = 0; i < length; i++) { 
           for (var j = 0; j < (length - i - 1); j++) { 
@@ -36,6 +35,7 @@ function bubbleSort() {
         }        
     }
     focus = parseInt(document.getElementById("focus").value)
-    document.getElementById("order").innerHTML = binarieSearch(focus, items)+"º"
+    console.log(focus)
+    document.getElementById("order").innerHTML = binarieSearch(focus, items)
 }
 
