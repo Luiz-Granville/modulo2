@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;900&family=Montserrat:wght@400&display=swap');
+body {
+    margin: 0;
+    font-family: Montserrat;
+    width: 100%;
+    max-width: 100%;
+    text-align: justify;
+}
+
+img{
+    width: 30px;
+}
+
+input{
+    background-color: #008037;
+    color: white;
+    border-radius: 5px;
+    box-shadow: none;
+    box-decoration-break: none;
+    border: none;
+    display: flex;
+    align-self: center;
+}
+
+#hability{
+    display: flex;
+    flex-direction: column;
+}
+
+input:focus{
+    outline: none;
+}
+
+::placeholder { 
+    color: #fff;
+    font-family: Montserrat;
+    text-align: center;
+    font-weight: 500;
+  }
+
+#input-hability{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+  
+#sentence-place{
+    display: flex;
+    
+}
+
+.sentence{
+    margin: 10px;
+    text-align: center;
+    align-self: center;
+}
+
+#edit{
+    margin: 15px;
+}
+#delete{
+    margin: 15px;
+}
+
+#edit:hover{
+    cursor: pointer;
+}
+#delete:hover{
+    cursor: pointer;
+}
+
+.main {
+    padding-top: 1.5rem;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background-color: #2E3333;
+}
+
+.header {
+    background-color: #7ed957;
+    padding: 7rem 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.body {
+    width: 100%;
+    max-width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.name {
+    min-width: 60vw;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    font-weight: rem;
+}
+
+.left{
+    min-width: 50vw;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+}
+
+.right {
+    min-width: 35vw;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    padding-right: 1rem;
+}
+
+.nameTitle {
+    font-size: 3rem;
+    margin: 0;
+    max-width: 15ch;
+    text-align: left;
+}
+
+.perfil {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
+}
+
+.perfilTitle, .perfilSubtitle {
+    margin: 0;
+    font-size: 1.2rem;
+
+}
+
+.nameSubtitle {
+    color: #008037;
+    font-size: 1.3rem;
+    font-weight: 1000;
+    letter-spacing: 0.2rem;
+}
+
+.perfilTitle {
+    letter-spacing: 0.1rem;
+}
+
+.line{
+    height: 10px;
+    border-width: 0;
+    margin-left: -4rem;
+    width: 50%;
+    background-color: #7ed957;
+}
+
+.bodyTitle {
+    color: #7ed957;
+}
+
+.experienceTitle {
+    color: #008037;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.experienceDesc {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.bodyText {
+    color: white;
+    font-size: 1rem;
+}
+
+.btn {
+    box-sizing: border-box;
+    background-color: transparent;
+    border: 2px solid #008037;
+    border-radius: 0.6em;
+    color: #7ed957;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    margin: 20px;
+    padding: 1.2em 2.8em;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+  }
+
+  .one {
+    border-color: #008037;
+    color: #fff;
+    background-image: -webkit-linear-gradient(45deg, #7ed957 50%, transparent 50%);
+    background-image: linear-gradient(45deg, #7ed957 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    -webkit-transition: background 300ms ease-in-out;
+    transition: background 300ms ease-in-out;
+  }
+  .one:hover {
+    background-position: 0;
+  }
+
+  #alert-message{
+      color: #008037;
+      font-size: 24px;
+      text-align: center;
+  }
+
+  

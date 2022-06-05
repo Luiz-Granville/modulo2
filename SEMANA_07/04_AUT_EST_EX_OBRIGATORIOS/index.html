@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Semana 7</title>
+</head>
+<body>
+    <div class="main">
+        <div>
+            <div onclick="hover(event)" class="divline"><h1>Exercício 1</h1></div>
+            <div id="um">
+                <div id="militante"><img src="./images/militante.png"></div>
+                    <div id="militantes-header">
+                        <div><h2>Informe a quantidade de militantes e <br> clique no botão + para somar ou - para subtrair</h2></div>
+                        <div id="input-militante">
+                            <a onclick="militantes(event)" href="#" class="btn btn-sm animated-button thar-one">-</a>
+                            <input id="militantes-qtd" placeholder="Informe o valor" type="number">
+                            <a onclick="militantes(event)" href="#" class="btn btn-sm animated-button thar-one">+</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="divline" onclick="hover(event)"><h1>Exercício 2</h1></div>
+            <div id="dois">
+                <div><h2>Informe duas plavaras e clique para troca-las de posição</h2></div>
+                <div id="input-militante">
+                    <input id="palavra1" placeholder="Informe uma palavra" type="text">
+                    <a onclick="trade()" href="#" id="trade-button" class="btn btn-sm animated-button thar-one">TROCAR</a>
+                    <input id="palavra2" placeholder="Informe outra palavra" type="text">
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="divline" onclick="hover(event)"><h1>Exercício 3</h1></div>
+            <div id="tres">
+                <div><h2>Informe um número de telefone na seguinte estrutura (XX)XXXXX-XXXX</h2></div>
+                <div id="input-militante">
+                    <input id="cell" placeholder="(XX)XXXXX-XXXX" type="text" onkeyup="verify()">
+                </div>
+                <div>
+                    <h2 id="alert"></h2>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="divline" onclick="hover(event)"><h1>Exercício 4</h1></div>
+            <div  id="quatro">
+                <div><h2>Informe um número de pessoas e o período do vôo</h2></div>
+                <div id="input-viajantes">
+                    <input class="fly" id="travel" placeholder="Número de viajantes" type="number">
+                    <select class="fly" name="" id="selection">
+                        <option hidden value="0 ">Escolha um período</option>
+                        <option value="1">Diurno</option>
+                        <option value="2">Noturno</option>
+                    </select>
+                    <a onclick="calculate()" href="#" id="trade-button" class="btn btn-sm animated-button thar-one">Calcular</a>
+                </div>
+                <div>
+                    <h2 id="alert-fly"></h2>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="divline" onclick="hover(event)"><h1>Exercício 5</h1></div>
+            <div  id="cinco">
+                        <input
+                          type="number"
+                          placeholder="Quantidade de alunos"
+                          id="nStudantes"
+                          onkeyup="entradas()"
+                        />
+                        <hr />
+                        <div id="entradas"></div>
+                        <div id="resultado"></div>
+            </div>
+        </div>
+    </div>
+    <script src="./source.js"></script>
+</body>
+</html>
