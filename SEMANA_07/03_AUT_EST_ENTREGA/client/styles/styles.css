@@ -64,12 +64,14 @@ input:focus {
 #sentence-place {
     display: flex;
 
+
 }
 
 .sentence {
     margin: 10px;
     text-align: center;
     align-self: center;
+    color: #fff;
 }
 
 #edit {

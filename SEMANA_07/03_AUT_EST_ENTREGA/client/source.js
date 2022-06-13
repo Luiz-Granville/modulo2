@@ -1,8 +1,10 @@
+
+
 function createLine() {
     $("#alert-message")[0].innerHTML = "Você irá     receber informações no seu e-mail!"
 }
 
-function getData(){
+function getData() {
     let url = "/information";
 
     let xhttp = new XMLHttpRequest();
@@ -19,19 +21,22 @@ function getData(){
 }
 
 getData()
+getSkills()
 function insertInputSkill(e) {
-    document.getElementById("input-hability").value = e.skill
+    // console.log(e);
     document.getElementById("edit-button").style.display = "block";
     document.getElementById("create-button").style.display = "none";
-
+    
+    document.getElementById("input-hability").value = e.nome;
+    document.getElementById("input-id").value = e.id;
 }
-function updateSkill() {
+
+async function updateSkill() {
     let skill = document.getElementById("input-hability").value
-    await
-    $.ajax({
+    await $.ajax({
         dataType: "json",
         contentType: "application/json",
-        url: "http://127.0.0.1:3051/habilidades/" + id,
+        url: "http://127.0.0.1:3051/habilidades/" + document.getElementById("input-id").value,
         type: "put",
         cors: true,
         headers: {
@@ -39,7 +44,6 @@ function updateSkill() {
         },
         data: JSON.stringify({ nome: skill }),
         success: function (resultData) {
-            console.log("Sucesso")
             document.getElementById("edit-button").style.display = "none";
             document.getElementById("create-button").style.display = "block";
             getSkills();
@@ -47,7 +51,7 @@ function updateSkill() {
     })
 }
 function deleteSkill(id) {
-    await
+    
     $.ajax({
         dataType: "json",
         contentType: "application/json",
@@ -58,7 +62,6 @@ function deleteSkill(id) {
             'Acces-Control-Allow-Origin': '*',
         },
         success: function (resultData) {
-            console.log("Sucesso")
             getSkills();
         }
     })
@@ -67,7 +70,6 @@ async function createSkills() {
     let skill = document.getElementById("input-hability").value
     await
         $.ajax({
-            dataType: "json",
             contentType: "application/json",
             url: "http://127.0.0.1:3051/habilidades",
             type: "post",
@@ -76,33 +78,37 @@ async function createSkills() {
                 'Acces-Control-Allow-Origin': '*',
             },
             data: JSON.stringify({ nome: skill }),
+            dataType: "json",
             success: function (resultData) {
-                console.log("Sucesso")
                 getSkills();
             }
         })
 }
 
 function getSkills() {
-    var data = "";
+    var data = [];
     $.ajax({
-        dataType: "json",
-        contentType: "application/json",
         url: "http://127.0.0.1:3051/habilidades",
         type: "get",
+        dataType: "text",
+        contentType: "application/json",
         cors: true,
         headers: {
             'Acces-Control-Allow-Origin': '*',
         },
         success: function (resultData) {
-            resultData.map((e) => {
-                data += `<div id="sentence-place">
-                <li class="sentence"> ${e}</li>
-                <img id="edit" src="./images/1159633.png" alt="" onclick="updateSkill(${e})">
-                <img id="delete" src="./images/1799391.png" alt="" onclick="deleteSkill(${e.id})">
+            var html = "";
+            let data = JSON.parse(resultData);
+            data.forEach((e) => {
+                html += `<div id="sentence-place">
+                <li class="sentence"> ${e.nome}</li>
+
+                <img id="edit" src="./images/1159633.png" alt="" onclick="insertInputSkill({id:${e.id}, nome:'${e.nome}'})" />
+              
+                <img id="delete" src="./images/1799391.png" alt="" onclick="deleteSkill(${e.id})" />
             </div>`;
             })
+            document.getElementById("listSkills").innerHTML = html
         }
     })
-    document.getElementById("listSkills").innerHTML = data
 }

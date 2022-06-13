@@ -14,7 +14,13 @@ app.use(express.static("./client"));
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
-
+// var db = new sqlite3.Database(DBPATH);
+// db.run(`
+// CREATE TABLE habilidades (
+//  id INTEGER PRIMARY KEY AUTOINCREMENT,
+// nome TEXT
+// );
+// `)
 app.get('/information', (req, res) => {
   res.statusCode = 200;
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -31,34 +37,34 @@ app.get('/information', (req, res) => {
 });
 
 app.post("/habilidades", urlencodedParser, (req, res) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
   res.statusCode = 200;
-  console.log(JSON.parse(req.body))
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  const { nome } = req.body;
   var db = new sqlite3.Database(DBPATH);
-  var sql = 'INSERT INTO habilidades (nome) VALUES (' + JSON.parse(req.body.nome) + ')';
-  db.run(sql, (result, err) => {
+  var sql = 'INSERT INTO habilidades (nome) VALUES (?)';
+  db.run(sql, [nome], (result, err) => {
     res.json("Sucesso")
   })
 
 });
 
-app.put("/habilidades?:id", (req, res) => {
+app.put("/habilidades/:id", urlencodedParser, (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.statusCode = 200;
-  console.log(JSON.parse(req.body))
+  // console.log(JSON.parse(req.body))
+  const { nome } = req.body;
   var db = new sqlite3.Database(DBPATH);
-  var sql = 'UPDATE habilidades SET nome VALUES (' + req.body.nome + ') WHERE id = ' + req.params.id;
-  db.run(sql, (result, err) => {
+  var sql = 'UPDATE habilidades SET nome = ? WHERE id = ?';
+  db.run(sql, [nome, req.params.id], (result, err) => {
     res.json("Sucesso")
   })
 
-});
+}); 
 app.get("/habilidades", (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.statusCode = 200;
-  console.log(JSON.parse(req.body))
   var db = new sqlite3.Database(DBPATH);
-  var sql = 'SELECT * FROM habilidades ';
+  var sql = 'SELECT * FROM habilidades';
   db.all(sql, (err, rows) => {
     res.json(rows)
   })
@@ -67,7 +73,6 @@ app.get("/habilidades", (req, res) => {
 app.delete("/habilidades/:id", (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.statusCode = 200;
-  console.log(JSON.parse(req.body))
   var db = new sqlite3.Database(DBPATH);
   var sql = 'DELETE FROM habilidades WHERE id=' + req.params.id;
   db.run(sql, (result, err) => {
