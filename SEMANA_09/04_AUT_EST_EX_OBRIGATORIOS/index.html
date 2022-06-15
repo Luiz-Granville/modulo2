@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Semana 7</title>
+</head>
+<body>
+    <div class="main">
+        <div>
+            <div onclick="hover(event)" class="divline"><h1>Exercício 1</h1></div>
+            <div id="um">
+                <div><h2>Informe um número com 3 dígitos ou mais</h2></div>
+                <div id="input-militante">
+                    <input id="number1" placeholder="Informe um valor" type="number">
+                    <a onclick="cardinalidade()" href="#" id="trade-button" class="btn btn-sm animated-button thar-one">VERIFICAR</a>
+                </div>
+                <div><h2 id="result-cardnalidade"></h2></div>
+            </div>
+        </div>
+        <div>
+            <div class="divline" onclick="hover(event)"><h1>Exercício 2</h1></div>
+            <div id="dois">
+                <div><h2>Informe um número</h2></div>
+                <div id="input-militante">
+                    <input id="number2" placeholder="Informe um valor" type="number">
+                    <a onclick="somarAlgarismos()" href="#" id="trade-button" class="btn btn-sm animated-button thar-one">VERIFICAR</a>
+                </div>
+                <div><h2 id="result-soma"></h2></div>
+            </div>
+        </div>
+        <div>
+            <div class="divline" onclick="hover(event)"><h1>Exercício 3</h1></div>
+            <div id="tres">
+                <div><h2>Informe 3 nomes a serem ordenados</h2></div>
+                <div id="input-militante">
+                   
+                    <input id="name0" placeholder="Informe um valor" type="text">
+                    <input id="name1" placeholder="Informe um valor" type="text">
+                    <input id="name2" placeholder="Informe um valor" type="text">
+                    <a onclick="ordenar()" href="#" id="trade-button" class="btn btn-sm animated-button thar-one">VERIFICAR</a>
+                </div>
+                <div><h2 id="result-ordem"></h2></div>
+            </div>
+        </div>
+        <div>
+            <div class="divline" onclick="hover(event)"><h1>Exercício 4</h1></div>
+            <div  id="quatro">
+                <div><h2>Informe o número da posição de fibonnaci</h2></div>
+                <div id="input-militante">
+                    <input id="numberFibonnaci" placeholder="Informe um valor" type="number">
+                    <a onclick="fibonacci()" href="#" id="trade-button" class="btn btn-sm animated-button thar-one">VERIFICAR</a>
+                </div>
+                <div><h2 id="result-fibo"></h2></div>
+            </div>
+        </div>
+        <div>
+            <div class="divline" onclick="hover(event)"><h1>Exercício 5</h1></div>
+            <div  id="cinco">
+                <div><h2>Informe o intervalo de dois números para verificar seus primos</h2></div>
+                <div id="input-militante">
+                    <input id="intervalo1" placeholder="Informe um valor" type="number">
+                    <input id="intervalo2" placeholder="Informe um valor" type="number">
+                    <a onclick="primoIntervalo()" href="#" id="trade-button" class="btn btn-sm animated-button thar-one">VERIFICAR</a>
+                </div>
+                <div id="primo-place"><h2 id="result-primo"></h2></div>
+            </div>
+        </div>
+    </div>
+    <script src="./source.js"></script>
+</body>
+</html>
