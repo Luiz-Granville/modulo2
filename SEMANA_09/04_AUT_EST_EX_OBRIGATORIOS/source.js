@@ -81,6 +81,8 @@ function ordenar() {
 }
 
 function fibonacci() {
+
+    if(document.getElementById("numberFibonnaci").value != ""){
     var n = parseInt(document.getElementById("numberFibonnaci").value, 10);
     var fib = new Array();
     fib[0] = 0;
@@ -92,7 +94,7 @@ function fibonacci() {
             fib[i] = fib[i - 2] + fib[i - 1];
         }
         document.getElementById("result-fibo").innerHTML = "Posição = " + n + ".\nValor = " + fib[n]
-    }
+    }}else{document.getElementById("result-fibo").innerHTML = "Informe Valores Válidos"}
 
 }
 
@@ -111,6 +113,9 @@ function ePrimo(n){
 
   function primoIntervalo(){
     var primos = []
+    var string1 = document.getElementById("intervalo1").value
+    var string2 = document.getElementById("intervalo2").value
+    if(string1 != "" && string2 != ""){
     var init = parseInt(document.getElementById("intervalo1").value)
     var end = parseInt(document.getElementById("intervalo2").value)
     document.getElementById("result-primo").innerHTML = "O números primos desse intervalo são: <br>"
@@ -122,5 +127,6 @@ function ePrimo(n){
     for(var i=0; i < primos.length;i++){
     document.getElementById("result-primo").innerHTML +=primos[i]+"<br>"
 
-    }
+    }}
+    else{document.getElementById("result-primo").innerHTML ="Informe valores válidos"}
 }
